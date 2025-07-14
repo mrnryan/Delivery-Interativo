@@ -1,0 +1,56 @@
+Listagem de caminhos de pasta
+O número de série do volume é 4447-BFB1
+C:.
+|   estrutura_saas_painel.txt
+|   seed.php
+|   
++---app
+|   |   helpers.php
+|   |   
+|   \---Controllers
+|           AuthController.php
+|           CompanyController.php
+|           DashboardController.php
+|           FinancialController.php
+|           NoteController.php
+|           UserController.php
+|           
++---config
+|       config.php
+|       
++---public
+|   |   index.php
+|   |   
+|   \---assets
+|       +---css
+|       |       style.css
+|       |       
+|       \---js
+|               expire.php
+|               
+\---views
+    |   dashboard.php
+    |   footer.php
+    |   header.php
+    |   sidebar.php
+    |   
+    +---auth
+    |       login.php
+    |       
+    +---companies
+    |       form.php
+    |       index.php
+    |       show.php
+    |       
+    +---financials
+    |       form.php
+    |       index.php
+    |       
+    +---notes
+    |       form.php
+    |       index.php
+    |       
+    \---users
+            form.php
+            index.php
+            

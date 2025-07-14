@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Captura tenant pela URL
+RewriteRule ^([^/]+)/?$ index.php?tenant=$1 [L,QSA]
+
+# As regras seguintes já usam o tenant incluso na URL
+RewriteRule ^([^/]+)/categoria-sabores-(.*)$ pizza.php?tenant=$1&url=$2&sabores=$2 [L,QSA]
+RewriteRule ^([^/]+)/categoria-(.*)$ itens.php?tenant=$1&url=$2 [L,QSA]
+RewriteRule ^([^/]+)/adicionais-(.*)$ adicionais.php?tenant=$1&url=$2&item=$2&sabores=$2 [L,QSA]
+RewriteRule ^([^/]+)/observacoes-(.*)$ observacoes.php?tenant=$1&url=$2&item=$2&sabores=$2 [L,QSA]
+RewriteRule ^([^/]+)/carrinho(.*)$ carrinho.php?tenant=$1 [L,QSA]
+RewriteRule ^([^/]+)/finalizar(.*)$ finalizar.php?tenant=$1 [L,QSA]
+RewriteRule ^([^/]+)/pedido/(.*)$ pedido.php?tenant=$1&id=$2 [L,QSA]
